@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundcinedegradado"
+    tools:context=".CrearSesionCine">
+
+
+    <TextView
+        android:id="@+id/tv_crar_sala"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Crear sesion"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/select_formatoSalaPelicula"
+        android:layout_width="171dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="56dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_crar_sala" />
+
+    <TextView
+        android:id="@+id/tv_formatoSalaPelicula"
+        android:layout_width="88dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="40dp"
+        android:text="Formato"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/select_formatoSalaPelicula"
+        app:layout_constraintStart_toStartOf="@+id/select_formatoSalaPelicula"
+        app:layout_constraintTop_toBottomOf="@+id/tv_crar_sala"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Spinner
+        android:id="@+id/select_numSala"
+        android:layout_width="171dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_numeroSala" />
+
+    <TextView
+        android:id="@+id/tv_numeroSala"
+        android:layout_width="78dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        android:text="Elige sala"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/select_formatoSalaPelicula" />
+
+    <TextView
+        android:id="@+id/tV_selectPeli"
+        android:layout_width="128dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="32dp"
+        android:text="Selecciona película"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/select_numSala"
+        app:layout_constraintTop_toBottomOf="@+id/select_numSala" />
+
+    <Spinner
+        android:id="@+id/selectPelicula"
+        android:layout_width="178dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tV_selectPeli" />
+
+    <Button
+        android:id="@+id/btnCrearPelicula"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="40dp"
+        android:text="CREAR"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_fecha"
+        android:layout_width="161dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="12dp"
+        android:text="Introduce fecha y hora"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectPelicula" />
+
+    <EditText
+        android:id="@+id/editText_horaSesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="dd/mm/HHHH hh:MM:ss"
+        android:inputType="text"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_fecha" />
+
+
+    <Button
+        android:id="@+id/btnAtrasSesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text="Atras"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnCrearPelicula"
+        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
